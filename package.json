@@ -1,0 +1,35 @@
+{
+  "name": "micro-starter",
+  "version": "0.0.1",
+  "description": "Start your micro app",
+  "main": "index.js",
+  "repository": "samtgarson/micro-starter",
+  "author": "samtgarson@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "^6.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "eslint": "^3.13.1",
+    "eslint-config-samtgarson": "^0.0.2",
+    "source-map-support": "^0.4.9",
+    "webpack": "2",
+    "xo": "^0.17.1"
+  },
+  "scripts": {
+    "start": "micro .",
+    "build": "node_modules/.bin/webpack",
+    "test": "xo"
+  },
+  "xo": {
+    "ignores": [
+      "index.js"
+    ],
+    "extends": "samtgarson"
+  }
+}
