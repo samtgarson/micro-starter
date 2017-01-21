@@ -31,8 +31,7 @@ const config = {
       {
         test: /\.js$/,
         use: [{
-          loader: 'babel-loader',
-          options: { presets: ['es2015', 'stage-2'] }
+          loader: 'babel-loader'
         }]
       }
     ]

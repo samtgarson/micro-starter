@@ -1,0 +1,13 @@
+#! /bin/bash
+
+rm -rf .git
+if yarn --version 2>/dev/null; then
+  yarn init
+  yarn
+else
+  npm init
+  npm i
+fi
+
+git init
+rm -rf ./bin
