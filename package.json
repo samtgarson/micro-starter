@@ -17,8 +17,11 @@
     "babel-polyfill": "^6.20.0",
     "babel-preset-stage-2": "^6.18.0",
     "babel-register": "^6.18.0",
+    "chalk": "^1.1.3",
     "eslint": "^3.13.1",
     "eslint-config-samtgarson": "^0.0.2",
+    "nodemon": "^1.11.0",
+    "ora": "^1.1.0",
     "request": "^2.79.0",
     "request-promise": "^4.1.1",
     "source-map-support": "^0.4.9",
@@ -28,14 +31,27 @@
   },
   "scripts": {
     "start": "micro .",
-    "build": "node_modules/.bin/webpack",
+    "dev": "node build --watch",
+    "build": "node build",
     "test": "ava && xo"
   },
   "xo": {
     "ignores": [
       "index.js"
     ],
-    "extends": "samtgarson"
+    "extends": "samtgarson",
+    "rules": {
+      "no-console": 0
+    },
+    "overrides": [
+      {
+        "files": "build/*.js",
+        "rules": {
+          "import/no-extraneous-dependencies": 0,
+          "unicorn/no-process-exit": 0
+        }
+      }
+    ]
   },
   "babel": {
     "presets": [

@@ -16,13 +16,14 @@ const config = {
   target: 'node',
   entry: [
     'babel-polyfill',
-    './src/main.js'
+    path.resolve(projectRoot, 'src/main.js')
   ],
   output: {
     libraryTarget: 'commonjs2',
     filename: 'index.js',
     path: projectRoot
   },
+  recordsPath: path.join(projectRoot, 'build/_records'),
   resolve: { modules: [path.resolve(projectRoot, 'node_modules')] },
   externals: nodeModules,
   devtool: '#eval-source-map',
@@ -30,9 +31,8 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        use: [{
-          loader: 'babel-loader'
-        }]
+        exclude: /node_modules/,
+        use: ['babel-loader']
       }
     ]
   },
@@ -41,7 +41,8 @@ const config = {
       banner: 'require("source-map-support").install();',
       raw: true,
       entryOnly: false
-    })
+    }),
+    new webpack.NamedModulesPlugin()
   ]
 }
 
