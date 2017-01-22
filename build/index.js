@@ -1,10 +1,11 @@
-const config = require('./webpack.config.js')
 const webpack = require('webpack')
 const nodemon = require('nodemon')
 const path = require('path')
 const chalk = require('chalk')
 const ora = require('ora')
 const argv = require('yargs').argv
+const env = require('./env')
+const config = require('./webpack.config.js')
 
 const log = console.log
 const WATCH = argv.watch
@@ -16,7 +17,8 @@ if (WATCH) {
     script: path.join(__dirname, '../index.js'),
     ignore: ['*'],
     watch: ['nothing/'],
-    ext: 'noop'
+    ext: 'noop',
+    env: (env || {})
   })
 
   const starter = ora('Building...').start()

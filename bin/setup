@@ -9,5 +9,6 @@ else
   npm i
 fi
 
+echo 'build/env.js' >> .gitignore
 git init
 rm -rf ./bin
