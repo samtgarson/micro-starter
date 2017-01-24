@@ -33,7 +33,9 @@
     "start": "micro .",
     "dev": "node build --watch",
     "build": "node build",
-    "test": "ava && xo"
+    "test": "ava && xo",
+    "test:spec": "ava",
+    "test:lint": "xo"
   },
   "xo": {
     "ignores": [
