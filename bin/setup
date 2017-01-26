@@ -12,3 +12,4 @@ fi
 echo 'build/env.js' >> .gitignore
 git init
 rm -rf ./bin
+rm readme.md
