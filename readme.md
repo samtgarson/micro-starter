@@ -33,7 +33,7 @@ Basic starter kit for a Node microservice using [Micro](https://github.com/zeit/
 
 ### Environment
 
-Don't check `build/env.js` into source control! Use it for env vars in development. You can keep `build/.env.example` updated with the environmental requirements of your app for other devs.
+Use `build/env.js` for env vars in development but don't check it into source control! You can keep `build/env.example.js` updated with the dummy environmental requirements of your app for other devs.
 
 ## Contribute
 
