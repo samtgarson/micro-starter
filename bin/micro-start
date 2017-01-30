@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+var path = require('path')
+var program = require('commander');
+var copy = require('copy')
+var ora = require('ora')
+const chalk = require('chalk')
+
+program
+  .version('0.0.1')
+  .usage('<app-name> [options]')
+  .description('Get started with a Node microservice')
+  .parse(process.argv)
+
+if (!program.args.length) program.help();
+
+const spinner = ora('Building application...').start()
+const name = program.args[0]
+const r = p => p.map(q => path.resolve(__dirname, '../'+q))
+const target = path.resolve(process.env.PWD, name)
+
+copy(r(['.gitignore', 'package.json', 'test/*', 'build/*', 'src/*']), target, function (err, file) {
+  const spawn = require( 'child_process' ).spawnSync
+  const cp = spawn('cd ' + target + ' && cp build/env.example.js env.js')
+
+  spinner.succeed('Built!')
+  console.log(`
+  Next steps:
+  ${chalk.magenta(`cd ${name}`)}
+  ${chalk.magenta('yarn init')}
+  ${chalk.magenta('yarn')}
+  ${chalk.magenta('git init')}
+
+  Happy microservicing! 👌`)
+})

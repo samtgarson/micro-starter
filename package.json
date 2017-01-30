@@ -10,6 +10,9 @@
     "babel-preset-latest": "^6.16.0",
     "micro": "^6.1.0"
   },
+  "bin": {
+    "micro-start": "bin/micro-start"
+  },
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-core": "^6.21.0",
@@ -18,6 +21,8 @@
     "babel-preset-stage-2": "^6.18.0",
     "babel-register": "^6.18.0",
     "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "copy": "^0.3.0",
     "eslint": "^3.13.1",
     "eslint-config-samtgarson": "^0.0.2",
     "nodemon": "^1.11.0",
