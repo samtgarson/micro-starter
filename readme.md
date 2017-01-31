@@ -16,6 +16,7 @@ Basic starter kit for a Node microservice using [Micro](https://github.com/zeit/
 ### Usage
 
 ```bash
+yarn global add micro-starter
 micro-start my-app-name # create a new project directory ready for microservicing
 ```
 
