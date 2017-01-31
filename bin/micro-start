@@ -7,7 +7,7 @@ var ora = require('ora')
 const chalk = require('chalk')
 
 program
-  .version('0.0.2')
+  .version('0.0.4')
   .usage('<app-name> [options]')
   .description('Get started with a Node microservice')
   .parse(process.argv)

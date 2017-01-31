@@ -27,7 +27,7 @@
     "xo": "^0.17.1"
   },
   "scripts": {
-    "start": "micro .",
+    "start": "node .",
     "dev": "node build --watch",
     "build": "node build",
     "test": "ava && xo",
