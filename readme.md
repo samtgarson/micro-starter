@@ -3,6 +3,8 @@
 
 Basic starter kit for a Node microservice using [Micro](https://github.com/zeit/micro) and other modern JS-y things.
 
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![npm](https://img.shields.io/npm/dt/micro-starter.svg)](https://www.npmjs.com/package/micro-starter) [![npm](https://img.shields.io/npm/v/micro-starter.svg)](https://www.npmjs.com/package/micro-starter)
+
 ## What do I get
 
 - 🔷 [Micro](https://github.com/zeit/micro) for no fluff HTTP serving
