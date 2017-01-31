@@ -4,7 +4,7 @@ const path = require('path')
 const chalk = require('chalk')
 const ora = require('ora')
 const argv = require('yargs').argv
-const env = require('./env')
+const env = require('./env.js')
 const config = require('./webpack.config.js')
 
 const log = console.log
