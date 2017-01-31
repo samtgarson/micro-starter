@@ -11,13 +11,13 @@ Basic starter kit for a Node microservice using [Micro](https://github.com/zeit/
 - ❤️ [XO](https://github.com/sindresorhus/xo) for no fuss linting
 - 🤓 Development setup including file watching and server restarting for happy devs
 
-### Setup
-
-1. `git clone git@github.com:samtgarson/micro-starter.git my-app-name`
-2. `cd my-app-name`
-3. `bin/setup`
-
 ## Tell me more
+
+### Usage
+
+```bash
+micro-start my-app-name # create a new project directory ready for microservicing
+```
 
 ### Helpers
 
@@ -37,6 +37,6 @@ Use `build/env.js` for env vars in development but don't check it into source co
 
 ## Contribute
 
-Please open issues/PRs.
+Please open issues/PRs. Thanks.
 
 Happy microservicing.

@@ -2,11 +2,12 @@
 var path = require('path')
 var program = require('commander');
 var copy = require('copy')
+var mv = require('mv')
 var ora = require('ora')
 const chalk = require('chalk')
 
 program
-  .version('0.0.1')
+  .version('0.0.2')
   .usage('<app-name> [options]')
   .description('Get started with a Node microservice')
   .parse(process.argv)
@@ -18,10 +19,7 @@ const name = program.args[0]
 const r = p => p.map(q => path.resolve(__dirname, '../'+q))
 const target = path.resolve(process.env.PWD, name)
 
-copy(r(['.gitignore', 'package.json', 'test/*', 'build/*', 'src/*']), target, function (err, file) {
-  const spawn = require( 'child_process' ).spawnSync
-  const cp = spawn('cd ' + target + ' && cp build/env.example.js env.js')
-
+const complete = () => {
   spinner.succeed('Built!')
   console.log(`
   Next steps:
@@ -31,4 +29,8 @@ copy(r(['.gitignore', 'package.json', 'test/*', 'build/*', 'src/*']), target, fu
   ${chalk.magenta('git init')}
 
   Happy microservicing! 👌`)
+}
+
+copy(r(['.gitignore', 'package.app.json', 'test/*', 'build/*', 'src/*']), target, function (err, file) {
+  mv(path.resolve(target, 'package.app.json'), path.resolve(target, 'package.json'), complete)
 })
