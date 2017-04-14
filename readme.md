@@ -38,6 +38,16 @@ micro-start my-app-name # create a new project directory ready for microservicin
 
 Use `build/env.js` for env vars in development but don't check it into source control! You can keep `build/env.example.js` updated with the dummy environmental requirements of your app for other devs.
 
+<hr />
+
+### Use `micro-starter`?
+
+Let people know on your readme! 👉  [![made with micro-starter](https://img.shields.io/badge/kit-micro--starter-3986fe.svg)](https://github.com/samtgarson/micro-starter)  👈
+
+```md
+[![made with micro-starter](https://img.shields.io/badge/kit-micro--starter-3986fe.svg)](https://github.com/samtgarson/micro-starter)
+```
+
 ## Contribute
 
 Please open issues/PRs. Thanks.
