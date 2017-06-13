@@ -23,10 +23,10 @@ const complete = () => {
   spinner.succeed('Built!')
   console.log(`
   Next steps:
-  ${chalk.magenta(`cd ${name}`)}
-  ${chalk.magenta('yarn init')}
-  ${chalk.magenta('yarn')}
-  ${chalk.magenta('git init')}
+  ${chalk.magenta(`> cd ${name}`)}
+  ${chalk.magenta('> yarn init')}
+  ${chalk.magenta('> yarn')}
+  ${chalk.magenta('> git init')}
 
   Happy microservicing! 👌`)
 }

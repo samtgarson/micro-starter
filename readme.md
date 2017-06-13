@@ -9,7 +9,7 @@ Basic starter kit for a Node microservice using [Micro](https://github.com/zeit/
 
 - 🔷 [Micro](https://github.com/zeit/micro) for no fluff HTTP serving
 - 📦 [Webpack](https://webpack.github.io/) for bundling with ES7 syntax
-- 🚀 [AVA](https://github.com/avajs/ava) for speedy and easy to write tests
+- 🃏 [Jest](https://github.com/facebook/jest) for speedy and easy to write tests
 - ❤️ [XO](https://github.com/sindresorhus/xo) for no fuss linting
 - 🤓 Development setup including file watching and server restarting for happy devs
 
@@ -30,7 +30,7 @@ micro-start my-app-name # create a new project directory ready for microservicin
 
 ### Testing
 
-- `yarn test:spec`: Run tests with AVA
+- `yarn test:spec`: Run tests with Jest
 - `yarn test:lint`: Lint your code with XO
 - `yarn test`: Run it all
 

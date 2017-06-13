@@ -31,13 +31,6 @@ if (WATCH) {
       runner = run()
     }
   })
-
-  process.once('SIGINT', () => {
-    log()
-    log(chalk.yellow('👋  Goodbye'))
-    if (runner) runner.once('exit', process.exit)
-    else process.exit()
-  })
 } else {
   const starter = ora('Building...').start()
   webpack(config).run(() => {
