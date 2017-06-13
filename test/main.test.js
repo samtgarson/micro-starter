@@ -1,15 +1,20 @@
-import test from 'ava'
 import listen from 'test-listen'
-import request from 'request-promise'
+import get from 'request-promise'
 import srv from '../src/main'
 
 let url
-test.before(async () => {
+beforeEach(async () => {
   url = await listen(srv)
 })
 
-test('hello world', async (t) => {
-  const body = await request(url)
-  const expected = 'hello world!'
-  t.is(body, expected)
+afterEach(async () => {
+  await srv.close()
+})
+
+describe('the app', () => {
+  it('responds correctly', async () => {
+    const body = await get(url)
+    const expected = 'hello world!'
+    expect(body).toBe(expected)
+  })
 })
