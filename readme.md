@@ -3,6 +3,8 @@
 
 Basic starter kit for a Node microservice using [Micro](https://github.com/zeit/micro) and other modern JS-y things.
 
+**[Deprecated]** Since [micro](https://github.com/zeit/micro) v8 was released, the recommended dev setup is [micro-dev](https://github.com/zeit/micro-dev). Good job team Zeit! 🔥
+
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![npm](https://img.shields.io/npm/dt/micro-starter.svg)](https://www.npmjs.com/package/micro-starter) [![npm](https://img.shields.io/npm/v/micro-starter.svg)](https://www.npmjs.com/package/micro-starter)
 
 ## What do I get
